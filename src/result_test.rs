@@ -33,4 +33,9 @@ fn main() {
         "c" => println!("2"),
         _ => println!("something else!"),
     }
+    
+    // convert a string to long
+    let i = "123".parse::<i64>();
+    println!("{:?}", i);
+
 }
