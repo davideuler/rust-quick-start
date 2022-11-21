@@ -21,6 +21,15 @@ fn multiply(first_number_str: &str, second_number_str: &str) -> Result<i32, Pars
     Ok(first_number * second_number)
 }
 
+// simplify the processing by ? to get variable out, or else return Error Result:
+fn multiply2(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
+    let first_number = first_number_str.parse::<i32>()?;
+    let second_number = second_number_str.parse::<i32>()?;
+
+    Ok(first_number * second_number)
+}
+
+
 fn print(result: Result<i32, ParseIntError>) {
     match result {
         Ok(n)  => println!("n is {}", n),
@@ -30,5 +39,7 @@ fn print(result: Result<i32, ParseIntError>) {
 
 fn main() {
     print(multiply("10", "2"));
-    print(multiply("t", "2"));
+    print(multiply("t", "2"))
+    print(multiply2("10", "2"));
+    print(multiply2("t", "2"));
 }
