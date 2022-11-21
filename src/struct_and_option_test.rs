@@ -27,7 +27,7 @@ struct R {
 use std::rc::Rc;
 
 struct Node {
-    parent: Option<Rc<Node>>, //
+    parent: Option<Rc<Node>>, // Rc is Reference Counter Pointer.
     value: i32
 }
 
@@ -70,6 +70,9 @@ fn foo() {
 // Cell and RefCell are structs which allow you to 'cheat' the mutability rules. 
 // if you want a mutable, ref counted object you need a Cell or RefCell wrapped in an Rc. (for objects with move semantics)
 // So, for a mutable, ref-counted int you would use Rc<Cell<int>>.
+
+// Use Cell for types which have copy semantics (pretty much just primitive types).
+// Use RefCell for types which have move semantics, that means nearly everything in Rust.
 
 // *T - raw pointers
 // Rust has two kinds of raw pointers (aka unsafe pointers): 
