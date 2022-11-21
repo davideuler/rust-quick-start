@@ -4,13 +4,14 @@ cargo run
 
 ## Build and run other program
 
+```
 cargo run --bin result_test
 cargo run --bin trait_and_dyn
 cargo run --bin borrow_test
 cargo run --bin box_and_rc
 cargo run --bin struct_impl_and_lambda
 cargo run --bin struct_impl_simple
-
+```
 
 
 ## Run rust jupyter notebooks
