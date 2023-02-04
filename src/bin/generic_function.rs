@@ -1,4 +1,5 @@
-
+/// https://doc.rust-lang.org/book/ch10-01-syntax.html
+/// 
 /// Partial Order Set: 
 ///   The word partial in the names "partial order" and "partially ordered set" is used 
 ///   as an indication that not every pair of elements needs to be comparable. 
