@@ -39,7 +39,7 @@ fn print(result: Result<i32, ParseIntError>) {
 
 fn main() {
     print(multiply("10", "2"));
-    print(multiply("t", "2"))
+    print(multiply("t", "2"));
     print(multiply2("10", "2"));
     print(multiply2("t", "2"));
 }

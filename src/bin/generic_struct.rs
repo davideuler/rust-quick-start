@@ -1,5 +1,4 @@
 use std::{fmt::Binary, ops::Add};
-
 pub struct Item<T,M>
 where 
   T: Add + Binary + Copy,

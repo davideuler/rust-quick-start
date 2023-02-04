@@ -6,6 +6,7 @@
 
 // 
 
+struct SomeOtherStruct{} // an empty struct
 
 struct S {
     field1: i32,
@@ -52,8 +53,6 @@ fn is_root(node: Node) -> bool {
 // As with the other pointer types, the . operator does all the dereferencing you need it to. You can use * to manually dereference.
 
 
-use std::rc::Rc;
-
 fn bar(x: Rc<i32>) { }
 
 fn baz(x: &i32) { }
@@ -87,7 +86,7 @@ fn foo() {
 
 // An example of using an raw pointer:
 
-fn foo() {
+fn foo2() {
     let mut x = 5;
     let x_p: *mut i32 = &mut x;
     println!("x+5={}", add_5(x_p));
@@ -104,4 +103,7 @@ fn add_5(p: *mut i32) -> i32 {
     }
 }
 
+fn main(){
+
+}
 

@@ -7,6 +7,7 @@ fn main() {
     
     // concatenate two string:
     let world = String::from( "world");
+    let r2 = "hello ";
     let a = r2.to_owned() + &world;
     println!("a={a}");
 }
