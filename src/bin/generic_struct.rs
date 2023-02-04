@@ -24,16 +24,9 @@ where
 }
 
 fn main() {
- 
-    let index_dir = std::path::Path::new("/tmp/index/").join("tantivy"); 
-    let index_path = index_dir.as_path();
-
-    if !index_dir.exists() {
-        _ = std::fs::create_dir_all(index_path);
-    }
 
     let notebook = Item::new(50u32, String::from("notebook"));
     let iphone = Item::new(6000u32, String::from("iPhone"));
-    println!("total:{}", notebook.add(&iphone));
+    println!("{} + {} , total:{}", notebook.name, iphone.name, notebook.add(&iphone));
  
 }
