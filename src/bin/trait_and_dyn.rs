@@ -1,7 +1,7 @@
 
 // https://doc.rust-lang.org/stable/rust-by-example/trait/dyn.html
 
-struct Sheep {}
+struct Sheep;
 struct Cow {}
 
 trait Animal {
