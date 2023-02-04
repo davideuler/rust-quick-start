@@ -15,7 +15,8 @@ where
 {
     pub fn new(price:T, name:M) -> Item<T,M> {
         // for struct Generic Types, param position does not matter in struct intitialization
-        Item{name, price}
+        //Item{name, price}
+        // Item{name:name, price:price};
     }
 
     pub fn add(& self, item: & Item<T,M>) -> T{
@@ -29,4 +30,5 @@ fn main() {
     let iphone = Item::new(6000u32, String::from("iPhone"));
     println!("{} + {} , total:{}", notebook.name, iphone.name, notebook.add(&iphone));
  
+    let item = Item{name:String::from("earphone"), price:102u32};
 }
